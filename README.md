@@ -1,8 +1,7 @@
 Alpine base Docker image
 ========================
 
-[![Build Status](https://travis-ci.com/monstrenyatko/docker-alpine.svg?branch=master)](https://travis-ci.com/monstrenyatko/docker-alpine)
-
+[![](https://github.com/monstrenyatko/docker-alpine/workflows/ci/badge.svg?branch=main)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Aci)
 
 About
 =====
