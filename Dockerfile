@@ -11,7 +11,7 @@ RUN find /scripts -type f -print0 | xargs -0 chmod 0755
 RUN buildDeps='build-base'; \
     set -ex && \
     apk update && apk upgrade && \
-    apk add $buildDeps bash shadow curl && \
+    apk add $buildDeps bash shadow curl libcap && \
     # su-exec
     curl -o /usr/local/bin/su-exec.c https://raw.githubusercontent.com/ncopa/su-exec/${SU_EXEC_VERSION}/su-exec.c && \
     gcc -Wall /usr/local/bin/su-exec.c -o /usr/local/bin/su-exec && \
