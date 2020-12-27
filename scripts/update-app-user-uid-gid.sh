@@ -13,7 +13,7 @@ update_user_gid () {
     _GROUPNAME=$2
     _GID=$3
     #
-    if [ -n "$_GID" ] && [ "$_GID" != "$(id $_GROUPNAME -g)" ]; then
+    if [ -n "$_GID" ] && [ "$_GID" != "$(id $_USERNAME -g)" ]; then
         set +e
         # delete all users using requested GID
         cut -d: -f1,4 /etc/passwd | grep -w $_GID |

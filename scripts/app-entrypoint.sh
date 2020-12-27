@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Drops root privileges when a user-name is specified
+# Executes command using provided user-name and group-name
 # Parameters:
 #   APP_USERNAME
 #   [OPTIONAL] APP_GROUPNAME
@@ -11,7 +11,9 @@ set -x
 # Exit on error
 set -e
 
-if [ "$(id -u)" = '0' -a -n "$APP_USERNAME" -a "$APP_USERNAME" != 'root' ]; then
+: "${APP_USERNAME:?Variable not set or empty}"
+
+if [[ "$(id -u)" != "$(id -u $APP_USERNAME)" || (-n "$APP_GROUPNAME" && "$(id -g)" != "$(getent group $APP_GROUPNAME | cut -d: -f3)") ]]; then
   if [ -n "$APP_GROUPNAME" ]; then
     exec su-exec "$APP_USERNAME:$APP_GROUPNAME" "$BASH_SOURCE" "$@"
   else

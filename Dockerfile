@@ -4,10 +4,6 @@ LABEL maintainer="Oleg Kovalenko <monstrenyatko@gmail.com>"
 
 ARG SU_EXEC_VERSION=212b75144bbc06722fbd7661f651390dc47a43d1
 
-COPY /scripts /scripts
-RUN chown -R root:root /scripts
-RUN find /scripts -type f -print0 | xargs -0 chmod 0755
-
 RUN buildDeps='build-base'; \
     set -ex && \
     apk update && apk upgrade && \
@@ -18,7 +14,11 @@ RUN buildDeps='build-base'; \
     chown root:root /usr/local/bin/su-exec && \
     chmod 0755 /usr/local/bin/su-exec && \
     rm /usr/local/bin/su-exec.c && \
-    #
+    # clean-up
     apk del $buildDeps && \
     rm -rf /root/.cache && mkdir -p /root/.cache && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
+
+COPY /scripts /scripts
+RUN chown -R root:root /scripts
+RUN find /scripts -type f -exec chmod 0755 {} \;
