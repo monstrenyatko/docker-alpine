@@ -2,7 +2,7 @@ FROM alpine:3
 
 LABEL maintainer="Oleg Kovalenko <monstrenyatko@gmail.com>"
 
-ARG SU_EXEC_VERSION=212b75144bbc06722fbd7661f651390dc47a43d1
+ARG SU_EXEC_VERSION=4c3bb42b093f14da70d8ab924b487ccfbb1397af
 
 RUN buildDeps='build-base'; \
     set -ex && \
