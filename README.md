@@ -1,7 +1,7 @@
 Alpine base Docker image
 ========================
 
-[![](https://github.com/monstrenyatko/docker-alpine/workflows/ci/badge.svg?branch=main)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Aci)
+[![](https://github.com/monstrenyatko/docker-alpine/actions/workflows/ci.yml/badge.svg)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Aci)
 
 About
 =====
