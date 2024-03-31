@@ -1,7 +1,7 @@
 Alpine base Docker image
 ========================
 
-[![](https://github.com/monstrenyatko/docker-alpine/actions/workflows/docker.yml/badge.svg)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Adocker)
+[![docker](https://github.com/monstrenyatko/docker-alpine/actions/workflows/docker.yml/badge.svg)](https://github.com/monstrenyatko/docker-alpine/actions/workflows/docker.yml)
 
 About
 =====
