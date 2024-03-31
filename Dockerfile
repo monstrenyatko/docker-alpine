@@ -1,4 +1,4 @@
-FROM alpine:3
+FROM alpine:3.19.1
 
 LABEL maintainer="Oleg Kovalenko <monstrenyatko@gmail.com>"
 

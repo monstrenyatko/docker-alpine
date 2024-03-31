@@ -1,7 +1,7 @@
 Alpine base Docker image
 ========================
 
-[![](https://github.com/monstrenyatko/docker-alpine/actions/workflows/ci.yml/badge.svg)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Aci)
+[![](https://github.com/monstrenyatko/docker-alpine/actions/workflows/docker.yml/badge.svg)](https://github.com/monstrenyatko/docker-alpine/actions?query=workflow%3Adocker)
 
 About
 =====
@@ -16,15 +16,6 @@ Upstream Links
 Build own image
 ===============
 
-* `default` target platform:
-
-  ```sh
-    cd <path to sources>
-    DOCKER_BUILDKIT=1 docker build --tag <tag name> .
-  ```
-* `arm/v6` target platform:
-
-  ```sh
-    cd <path to sources>
-    DOCKER_BUILDKIT=1 docker build --platform=linux/arm/v6 --tag <tag name> .
-  ```
+```sh
+./build.sh <tag name>
+```

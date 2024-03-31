@@ -24,5 +24,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build and push
         run: |
-          ./build.sh "$REPO:$(date +%Y%m%d)" "--push"
-          ./build.sh "$REPO:latest" "--push"
+          ./build.sh "$REPO:$(date +%Y-%m-%d)" "--push"
